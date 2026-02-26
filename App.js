@@ -9,12 +9,12 @@ import Svg, { Line, Rect, Path, G } from "react-native-svg";
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 const CHART_WIDTH  = SCREEN_WIDTH - 28;
 const CHART_HEIGHT = 180;
-const BASE_API     = "https://api.crypto.com/exchange/v1";
+const BASE_API     = "https://btc-trader-production-acb9.up.railway.app";
 const INSTRUMENT   = "BTC_USDT";
 const TIMEFRAME    = "M5";
 
 async function fetchCandles() {
-  const url = `${BASE_API}/public/get-candlestick?instrument_name=${INSTRUMENT}&timeframe=${TIMEFRAME}&count=80`;
+  const url = `${BASE_API}/candles`;
   const res  = await fetch(url);
   const json = await res.json();
   return (json?.result?.data || []).map(d => ({
@@ -23,7 +23,7 @@ async function fetchCandles() {
 }
 
 async function fetchTicker() {
-  const url = `${BASE_API}/public/get-ticker?instrument_name=${INSTRUMENT}`;
+  const url = `${BASE_API}/ticker`;
   const res  = await fetch(url);
   const json = await res.json();
   return parseFloat(json?.result?.data?.a || 0);
