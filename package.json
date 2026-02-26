@@ -15,7 +15,7 @@
     "expo-status-bar": "~3.0.9",
     "expo-updates": "~29.0.16",
     "express": "^5.2.1",
-    "node-fetch": "^3.3.2",
+    "node-fetch": "^2.7.0",
     "react": "19.1.0",
     "react-native": "0.81.5",
     "react-native-svg": "15.12.1"
