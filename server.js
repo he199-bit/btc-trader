@@ -5,6 +5,8 @@ const app = express();
 
 app.use(cors());
 
+app.get("/health", (req, res) => res.send("OK")); 
+
 app.get("/candles", async (req, res) => {
   try {
     const response = await fetch("https://api.crypto.com/exchange/v1/public/get-candlestick?instrument_name=BTC_USDT&timeframe=M5&count=80");
