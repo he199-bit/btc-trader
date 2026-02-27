@@ -9,7 +9,7 @@ import Svg, { Line, Rect, Path, G } from "react-native-svg";
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 const CHART_WIDTH  = SCREEN_WIDTH - 28;
 const CHART_HEIGHT = 180;
-const BASE_API     = "https://btc-trader-production-b2e9.up.railway.app";
+const BASE_API     = "https://btc-trader-production-c7ce.up.railway.app";
 const INSTRUMENT   = "BTC_USDT";
 const TIMEFRAME    = "M5";
 
